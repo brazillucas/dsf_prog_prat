@@ -35,18 +35,14 @@ function timer () {
     total = dataFinal - dataAtual;
 
     let dias = Math.floor(total / dia);
-    console.log(dia, dias);
     let horas = Math.floor((total % dia) / hora + 3);
-    console.log(hora, horas);
     let minutos = Math.floor((total % hora) / minuto);
-    console.log(minuto, minutos);
     let segundos = Math.floor((total % minuto) / segundo);
-    console.log(segundo, segundos);
 
 
-    horas < 10 && horas > 0 ? horas = "0" + horas : horas;
-    minutos < 10 && minutos > 0 ? minutos = "0" + minutos : minutos;
-    segundos < 10 && segundos > 0 ? segundos = "0" + segundos : segundos;
+    horas < 10 && horas >= 0 ? horas = "0" + horas : horas;
+    minutos < 10 && minutos >= 0 ? minutos = "0" + minutos : minutos;
+    segundos < 10 && segundos >= 0 ? segundos = "0" + segundos : segundos;
     
 
     if ((dias == 1)){
@@ -61,11 +57,8 @@ function timer () {
 
     const currentDate = new Date();
     const seconds = Math.floor((total % minuto) / segundo) / 60;
-    console.log("segundos: " + seconds);
     const minutes = Math.floor((total % hora) / minuto) / 60;
-    console.log("minutos: " + minutes);
     const hours = Math.floor((total % dia) / hora + 2) / 12;
-    console.log("horas: " + hours);
     
     setRotation(sec, seconds);
     setRotation(min, minutes);
@@ -92,8 +85,8 @@ function setRotation(element, rotationRatio) {
 }
 
 function stop() {
-    document.querySelector("#contagem").innerHTML = "";
-    
+    document.querySelector("#cronometro").innerHTML = "00:00:00";
+    document.querySelector("#cronometro_dias").innerHTML = "Faltam";
     clearInterval(intervalId);
     localStorage.removeItem("timer");
 }
