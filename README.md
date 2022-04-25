@@ -11,3 +11,7 @@ Nós iremos criar um disparador de mensagens para WhatsApp, aprendendo a importa
 - [ ] Flex
 - [ ] Box-Shadow
 - [ ] Border-Radius
+
+
+## Projeto #2
+Vamos desenvolver um cronômetro online de contagem regressiva. Você vai aprender como armazenar os dados para que, mesmo fechando a página do navegador, o cronômetro continue com a contagem rodando.

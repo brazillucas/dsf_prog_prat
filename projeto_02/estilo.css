@@ -1,0 +1,116 @@
+body{
+    background-color: black;    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.start {
+    background-color: #ff4791;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+input{    
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: medium;
+}
+
+button:hover {
+    background-color: #e46397;
+}
+
+.stop {
+    background-color: #f8a0c3;
+    color: black;
+}
+
+.cronometro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #17d4fe;
+    font-size: 20px;
+    font-family: monospace;
+    letter-spacing: 7px;
+}
+
+.clock{
+    width: 200px;
+    height: 200px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    border: 3px solid #17d4fe;
+    position: relative;
+}    
+
+.clock .number{ 
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1rem;
+    transform: rotate(var(--rotation));
+    color: #1868aa;
+}
+
+.clock .n1{ --rotation: 30deg; }
+.clock .n2{ --rotation: 60deg; }
+.clock .n3{ --rotation: 90deg; }
+.clock .n4{ --rotation: 120deg; }
+.clock .n5{ --rotation: 150deg; }
+.clock .n6{ --rotation: 180deg; }
+.clock .n7{ --rotation: 210deg; }
+.clock .n8{ --rotation: 240deg; }
+.clock .n9{ --rotation: 270deg; }
+.clock .n10{ --rotation: 300deg; }
+.clock .n11{ --rotation: 330deg; }
+
+.clock .time {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-59%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 46.5%;
+    left: 46.5%;
+    border-radius: 50%;
+}
+
+.clock .time.second{
+    width: 3px;
+    height: 35%;
+    background-color: red;
+}
+
+.clock .time.minute{
+    width: 5px;
+    height: 30%;
+    background-color: black;
+}
+
+.clock .time.hour{
+    width: 8px;
+    height: 25%;
+    background-color: black;
+}
