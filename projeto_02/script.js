@@ -44,9 +44,9 @@ function timer () {
     console.log(segundo, segundos);
 
 
-    horas < 10 ? horas = "0" + horas : horas;
-    minutos < 10 ? minutos = "0" + minutos : minutos;
-    segundos < 10 ? segundos = "0" + segundos : segundos;
+    horas < 10 && horas > 0 ? horas = "0" + horas : horas;
+    minutos < 10 && minutos > 0 ? minutos = "0" + minutos : minutos;
+    segundos < 10 && segundos > 0 ? segundos = "0" + segundos : segundos;
     
 
     if ((dias == 1)){
