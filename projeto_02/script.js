@@ -1,6 +1,3 @@
-//Chama a função setInputDate para configurar o input date
-setInputDate("#minhaData");
-
 //Declaração das constantes para o cronômetro
 const segundo = 1000;
 const minuto = segundo * 60;
@@ -20,6 +17,9 @@ const sec = document.querySelector('[data-second-hand]');
 
 //Variável que recebe o id do setInterval
 let intervalClock;
+
+//Chama a função setInputDate para configurar o input date
+setInputDate("#minhaData");
 
 //Configurando o input date para pegar a data atual ou a data que foi salva
 
@@ -93,9 +93,6 @@ function timeConverter(timestamp){
     //Verifica se o dia salvo é menor que 10 e adiciona um '0' antes do dia
     //Se o dia for menor que 10 adiciona um '0' antes do dia
     (date < 10) ? time = `${time}-0${date}` : time = `${time}-${date}`;
-
-    console.log(time);
-
 
     //Retorna a data salva
     return time;
