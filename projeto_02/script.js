@@ -74,6 +74,9 @@ function setRotation(element, rotationRatio) {
 function stop() {
     document.querySelector("#cronometro").innerHTML = "00:00:00";
     document.querySelector("#cronometro_dias").innerHTML = "Faltam";
+    setRotation(sec, 0);
+    setRotation(min, 0);
+    setRotation(hour, 0);
     clearInterval(intervalId);
     localStorage.removeItem("timer");
 }
