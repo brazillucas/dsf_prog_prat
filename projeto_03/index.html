@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="board">
+        <h3>A Fazer</h3>
+        <ul id="toDo" ondrop="drop(event, this.id)" ondragover="over(event)">
+            <li id="0" draggable="true" ondragstart="drag(event)">
+                <p>Esse é um exemplo de tarefa</p>
+                <p class="remove" onclick="removeCard(this)">x</p>
+            </li>
+            <li id="1" draggable="true" ondragstart="drag(event)">
+                <p>Você pode adicionar suas próprias tarefas</p>
+                <p class="remove" onclick="removeCard(this)">x</p>
+            </li>
+            
+        </ul>
+        <div class="add-card" onclick="addCard(this)">
+            <p>Adicionar Tarefa</p>
+        </div>
+    </div>
+
+    <div class="board">
+        <h3>Fazendo</h3>
+        <ul id="doing" ondrop="drop(event, this.id)" ondragover="over(event)">
+            <li id="2" draggable="true" ondragstart="drag(event)">
+                <p>Este é um exemplo de tarefa que está sendo feita!</p>
+                <p class="remove" onclick="removeCard(this)">x</p>
+            </li>
+            
+        </ul>
+        <div class="add-card" onclick="addCard(this)">
+            <p>Adicionar Tarefa</p>
+        </div>
+    </div>
+
+    <div class="board">
+        <h3>Entregue</h3>
+        <ul id="done" ondrop="drop(event, this.id)" ondragover="over(event)">
+            <li id="3" draggable="true" ondragstart="drag(event)">
+                <p>Este é um exemplo de tarefa que já foi entregue!</p>
+                <p class="remove" onclick="removeCard(this)">x</p>
+            </li>
+            <li id="4" draggable="true" ondragstart="drag(event)">
+                <p>Clique no <b>X</b> para fechar a nota.</p>
+                <p class="remove" onclick="removeCard(this)">x</p>
+            </li>
+        </ul>
+        <div class="add-card" onclick="addCard(this)">
+            <p>Adicionar Tarefa</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
