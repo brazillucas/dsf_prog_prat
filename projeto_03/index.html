@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -16,7 +18,7 @@
                 <p class="remove" onclick="removeCard(this)">x</p>
             </li>
             <li id="1" draggable="true" ondragstart="drag(event)">
-                <p>Você pode adicionar suas próprias tarefas</p>
+                <p>Você pode adicionar suas próprias tarefas clicando em <em>Adicionar Tarefa</em> logo abaixo.</p>
                 <p class="remove" onclick="removeCard(this)">x</p>
             </li>
             
@@ -30,7 +32,7 @@
         <h3>Fazendo</h3>
         <ul id="doing" ondrop="drop(event, this.id)" ondragover="over(event)">
             <li id="2" draggable="true" ondragstart="drag(event)">
-                <p>Este é um exemplo de tarefa que está sendo feita!</p>
+                <p>Arraste tarefas de uma aba para outra para mudar o seu status.</p>
                 <p class="remove" onclick="removeCard(this)">x</p>
             </li>
             
@@ -44,7 +46,7 @@
         <h3>Entregue</h3>
         <ul id="done" ondrop="drop(event, this.id)" ondragover="over(event)">
             <li id="3" draggable="true" ondragstart="drag(event)">
-                <p>Este é um exemplo de tarefa que já foi entregue!</p>
+                <p>Você tabém pode usar tags HTML para editar a formatação da sua tarefa.</p>
                 <p class="remove" onclick="removeCard(this)">x</p>
             </li>
             <li id="4" draggable="true" ondragstart="drag(event)">
